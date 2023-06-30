@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Github Repo URL: [QR Code Repo](https://github.com/amyspencerproject/qr-code)
-- Live Site URL: [QR Code Page](https://amyspencerproject.github.io/qr-code/)
+- Github Repo URL: [Base Apparel Repo](https://github.com/amyspencerproject/base-apparel)
+- Live Site URL: [Base Apparel Page](https://amyspencerproject.github.io/base-apparel/)
 
 ## My process
 
@@ -47,13 +47,18 @@ Users should be able to:
 
 ### What I learned
 
--
+- I am opting to go with a grid layout for this challenge. I think that it will be easy to make a the transition from mobile view with the hero image below the log and above the header to the desktop view. In the desktop view the hero image takes up the entire right hand side of the design and while the vertical stack of all the other elements slide to the left hand side.
+- I did put a div with a class of grid-container around the elements just to keep things out to the main elements where styling should be minimal.
+- Used a simple linear gradient for the background. Applied this to the body so it covered everything.
+- To achive the line breaks in the header used a `<span>` with class of break, `.break { display: block; }`
+- Added more structure to grid layout in desktop view with 2 columns and 4 rows. Need to use minmax and hopefully auto-fill to get the content decent looking.
 
 ### Continued development
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [linear-gradient](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient)
+-
 
 ## Author
 
