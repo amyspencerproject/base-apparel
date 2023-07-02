@@ -149,7 +149,9 @@ main {
 @media screen and (min-width: 60rem) {
   .grid-container {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4, 10rem);
+    /* grid-template-rows: 100px repeat(3, minmax(150px, 1fr)); */
+    /* grid-template-rows: auto-fill, minmax(75px, 1fr); */
+    grid-template-rows: 100px repeat(3, minmax(75px, auto));
   }
 
   .hero {
@@ -161,5 +163,10 @@ main {
   .body-text,
   .input-email {
     grid-column: 1 / 2;
+  }
+
+  .header,
+  .body-text {
+    text-align: left;
   }
 }
