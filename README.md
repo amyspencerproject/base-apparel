@@ -52,13 +52,11 @@ Users should be able to:
 - Used a simple linear gradient for the background. Applied this to the body so it covered everything.
 - To achive the line breaks in the header used a `<span>` with class of break, `.break { display: block; }`
 - Added more structure to grid layout in desktop view with 2 columns and 4 rows. Need to use minmax and hopefully auto-fill to get the content decent looking.
-- The fr unit, is a measurement of the amount of free space available for a row or column to stretch. It is very similar to the flex-grow property. the fractional unit tells an item how much extra space to take up.
-
-Fractional units are helpful for divvying up the extra space in a grid container without declaring a specific width or height. You can use the fractional unit as a value for the grid-template-columns or grid-template-rows properties:
-
-1
-grid-template-columns: 200px 1fr 1fr;
-A value of 1fr means that the columns will take up an equal number of available space. Whereas a higher number, like 2fr, means that it will take up twice as much available space.
+- The fr unit, is a measurement of the amount of free space available for a row or column to stretch. It is very similar to the flex-grow property. the fractional unit tells an item how much extra space to take up. A value of 1fr means that the columns will take up an equal number of available space. Whereas a higher number, like 2fr, means that it will take up twice as much available space.
+- Having a hard time gettin the rows to to be implicit because the hero image takes up so much space if you do an auto-fill/auto-fit option. End up with `grid-template-rows: 100px repeat(3, minmax(30px, auto));
+` The first row has to be contrained to hold both the header logo and the hero image.
+- Not sure how wise it is to contrain that first row to 100px.
+- Not loving the look of the mobile image at viewport sizes > 375px as it doesn't stretch at all. So I added ` grid-template-columns: minmax(150px, 400px);` to the grid container to keep everything the same size so the image didn't look out of place.
 
 ### Continued development
 
