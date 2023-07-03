@@ -53,12 +53,16 @@ Users should be able to:
 - To achive the line breaks in the header used a `<span>` with class of break, `.break { display: block; }`
 - Added more structure to grid layout in desktop view with 2 columns and 4 rows. Need to use minmax and hopefully auto-fill to get the content decent looking.
 - The fr unit, is a measurement of the amount of free space available for a row or column to stretch. It is very similar to the flex-grow property. the fractional unit tells an item how much extra space to take up. A value of 1fr means that the columns will take up an equal number of available space. Whereas a higher number, like 2fr, means that it will take up twice as much available space.
-- Having a hard time gettin the rows to to be implicit because the hero image takes up so much space if you do an auto-fill/auto-fit option. End up with `grid-template-rows: 100px repeat(3, minmax(30px, auto));
-` The first row has to be contrained to hold both the header logo and the hero image.
-- Not sure how wise it is to contrain that first row to 100px.
-- Not loving the look of the mobile image at viewport sizes > 375px as it doesn't stretch at all. So I added ` grid-template-columns: minmax(150px, 400px);` to the grid container to keep everything the same size so the image didn't look out of place.
+- Had a difficult time with the HTML structure I initially put together. Body > Main > Grid Container > (everything including the logo and hero image!) Stuggled with gettin the rows to to be implicit because the hero image takes up so much space if you do an auto-fill/auto-fit option. End up with `grid-template-rows: 100px repeat(3, minmax(30px, auto));` The first row has to be contrained to hold both the header logo and the hero image. It wasn't working out well at all.
+- Then I read some of the feedback from Grace given to others on this challenge and made quite a few changes.
 - First mistake I made was that I had what should be the header inside the `<main>` section. Took logo out and put into `<header>`. This broke my layout but in a good way!
-- Not sure what to do with the hero image yet. I could make it an `<aside>` or keep it in grid container. If in an `<aside>` then I don't have to have the alt tage with the despriction as being in an aside means it is not important for the user of a screen reader to know about.
+- Not sure what to do with the hero image yet. I could make it an `<aside>` or keep it in grid container. If in an `<aside>` then the screen reader will annouce to the user that this is a complementary image. Or I could chose to not let the screen reader users know about the image and not describe it but then I would leave in in `<main>`.
+- Made the body under the grid format and then positioned header, aside, main, and footer. In the mobile view this meant letting everything auto positon. For the desktop view the format is 2 columns and 4 rows.
+- Had the same issue where the hero image was making the 1st row super tall. Thought that using `grid-auto-rows: min-content;` would fixt this but no winner yet.
+- Just left grid-template-rows off altogether for the time being.
+- Also noted that the `<header>` says it is causing an overflow.
+  ![](./Screenshot%20header%20overflow.png)
+  This could be why the spacing for the rows is still large. Not understanding why the 1st row has so much vertical spacing.
 
 Input/Form
 

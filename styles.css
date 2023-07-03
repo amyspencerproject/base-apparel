@@ -87,15 +87,20 @@ select {
 }
 
 /* ======= Base Styles ======= */
-* {
-  /* outline: solid 1px red; */
-}
+/*  {
+  outline: solid 1px red;
+} */
 
 body {
   background: linear-gradient(
     var(--white-gradient-one),
     var(--white-gradient-two)
   );
+  display: grid;
+}
+
+aside {
+  place-self: center;
 }
 
 main {
@@ -104,13 +109,12 @@ main {
   height: 100%;
 }
 
-.grid-container {
-  display: grid;
-  place-content: center;
-  grid-template-columns: minmax(150px, 400px);
+.flex-container {
+  display: flex;
+  flex-flow: column wrap;
 }
 
-.header {
+.body-header {
   color: var(--dark-red);
   font-size: 2.5rem;
   font-weight: 600;
@@ -151,6 +155,10 @@ main {
 
 /* ======= Form ======= */
 
+.email-submit {
+  place-self: center;
+}
+
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -162,18 +170,30 @@ main {
   width: 1px;
 }
 
+.hide {
+  display: none;
+}
+
 .input-email {
   border-radius: 28px;
 }
 
 /* ======= Footer ======= */
-a {
+footer {
+  align-self: end;
+  display: flex;
+  justify-content: center;
+}
+
+footer a {
   color: var(--desaturated-red);
   text-decoration: none;
 }
 .attribution {
   color: var(--dark-red);
   margin-top: 3rem;
+  margin-inline: 5rem;
+  width: 70%;
 }
 
 /* ========================= Media Queriers ========================= */
@@ -184,28 +204,35 @@ a {
 
 /* desktop change at 960px */
 @media screen and (min-width: 60rem) {
-  .grid-container {
-    /* grid-template-columns: 1fr 1fr; */
-    /* grid-template-rows: 100px repeat(3, minmax(150px, 1fr)); */
+  body {
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: 100px repeat(2, minmax(150px, 1fr)); */
     /* grid-template-rows: auto-fill, minmax(75px, 1fr); */
-    /* grid-template-rows: 100px repeat(3, minmax(30px, auto)); */
+    /* grid-template-rows: 100px repeat(2, minmax(30px, auto)); */
     /* grid-auto-rows: auto; */
+    /* grid-auto-rows: min-content; */
+    /* grid-template-rows: repeat(3, minmax(10px, min-content)); */
   }
 
-  .hero {
-    /* grid-column: 2 / -1;
-    grid-row: 1 / -1; */
+  aside {
+    grid-column: 2 / -1;
+    grid-row: 1 / span 3;
   }
 
-  .header-logo,
-  .header,
+  main {
+    grid-column: 1 / 2;
+  }
+
+  footer {
+    grid-column: 1 / 2;
+    grid-row: 3;
+  }
+
+  .body-header,
   .body-text,
-  .input-email {
-    /* grid-column: 1 / 2; */
-  }
-
-  .header,
-  .body-text {
+  .attribution,
+  .header-logo {
     text-align: left;
+    margin-inline: 10rem;
   }
 }
