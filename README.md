@@ -86,6 +86,8 @@ Adding a class like this seems to be the way to go.
 }
 ```
 
+- When adding a linear gradient to a button you have to call it a `background-image` not a `background-color`.
+
 ### Continued development
 
 ### Useful resources
@@ -96,6 +98,7 @@ Adding a class like this seems to be the way to go.
 - [Hiding Labels](https://www.w3.org/WAI/tutorials/forms/labels/#hiding-the-label-element)
 - [Inputs and Labels](https://css-tricks.com/html-inputs-and-labels-a-love-story/)
 - [Input Name Attribute](https://www.w3schools.com/tags/att_input_name.asp)
+- [Buttons w/ Gradients] (https://html-online.com/articles/gradient-background-buttons-css-html/)
 
 ## Author
 
