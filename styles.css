@@ -88,7 +88,7 @@ select {
 
 /* ======= Base Styles ======= */
 * {
-  outline: solid 1px red;
+  /* outline: solid 1px red; */
 }
 
 body {
@@ -149,6 +149,33 @@ main {
   margin-bottom: 1.5rem;
 }
 
+/* ======= Form ======= */
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.input-email {
+  border-radius: 28px;
+}
+
+/* ======= Footer ======= */
+a {
+  color: var(--desaturated-red);
+  text-decoration: none;
+}
+.attribution {
+  color: var(--dark-red);
+  margin-top: 3rem;
+}
+
 /* ========================= Media Queriers ========================= */
 
 /* tablet change at 640px */
@@ -158,23 +185,23 @@ main {
 /* desktop change at 960px */
 @media screen and (min-width: 60rem) {
   .grid-container {
-    grid-template-columns: 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr; */
     /* grid-template-rows: 100px repeat(3, minmax(150px, 1fr)); */
     /* grid-template-rows: auto-fill, minmax(75px, 1fr); */
-    grid-template-rows: 100px repeat(3, minmax(30px, auto));
+    /* grid-template-rows: 100px repeat(3, minmax(30px, auto)); */
     /* grid-auto-rows: auto; */
   }
 
   .hero {
-    grid-column: 2 / -1;
-    grid-row: 1 / -1;
+    /* grid-column: 2 / -1;
+    grid-row: 1 / -1; */
   }
 
   .header-logo,
   .header,
   .body-text,
   .input-email {
-    grid-column: 1 / 2;
+    /* grid-column: 1 / 2; */
   }
 
   .header,
