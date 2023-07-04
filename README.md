@@ -87,6 +87,7 @@ Adding a class like this seems to be the way to go.
 ```
 
 - When adding a linear gradient to a button you have to call it a `background-image` not a `background-color`.
+- Do not know how to center the arrow image in the button??
 
 ### Continued development
 
