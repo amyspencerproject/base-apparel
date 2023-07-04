@@ -1,6 +1,7 @@
 const submitEmail = document.querySelector(".input-submit");
 const emailInputField = document.querySelector("#email-address");
-const errorMessage = document.querySelector(".error-message");
+const userMessage = document.querySelector(".user-message");
+const warningIcon = document.querySelector(".warning");
 
 // event listerner for submit button
 
@@ -8,14 +9,12 @@ submitEmail.addEventListener("click", function (e) {
   const emailText = emailInputField.value;
   console.log(emailText);
   e.preventDefault();
-  console.log("Enter on button registered as an event!");
 
   //clear out the error message
-  errorMessage.innerText = "";
+  userMessage.innerText = "";
 
   // validate the email address
   let validEmail = inputValidator(emailText);
-  //   console.log(validEmail);
 
   //clear out input field if valid
   if ((validEmail = true)) {
@@ -26,10 +25,11 @@ submitEmail.addEventListener("click", function (e) {
 const inputValidator = function (emailText) {
   const acceptedEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-  // error message for invalid email address w/ JSX
+  // user message and warning icon for invalid email address
   if (!emailText.match(acceptedEmail)) {
-    errorMessage.innerText = "Please provide a valid email";
+    userMessage.innerText = "Please provide a valid email";
+    warningIcon.style.display = "block";
+  } else {
+    userMessage.innerText = "Thank you for siging up!";
   }
 };
-
-//store email address in local.storage?

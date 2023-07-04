@@ -89,7 +89,9 @@ Adding a class like this seems to be the way to go.
 ```
 
 - When adding a linear gradient to a button you have to call it a `background-image` not a `background-color`.
-- Do not know how to center the arrow image in the button??
+- Do not know how to center the arrow image in the button. StackOver flow suggested that `text-align: center` would work but it did not. Asked for help on FEB Discord and the solution was to put the button under `flex` and then `justify-content: center`.
+
+- Styled the focus border that shows up when you click on a input field. The default is blue.
 
 JavaScript
 
@@ -108,6 +110,9 @@ JavaScript
 - [Input Name Attribute](https://www.w3schools.com/tags/att_input_name.asp)
 - [Buttons w/ Gradients] (https://html-online.com/articles/gradient-background-buttons-css-html/)
 - [Regex Email Validator](https://www.w3resource.com/javascript/form/email-validation.php)
+- [Placeholder Styling](https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder)
+- [Outline](https://developer.mozilla.org/en-US/docs/Web/CSS/outline)
+- [input:focus](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus)
 
 ## Author
 

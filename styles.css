@@ -184,9 +184,17 @@ main {
   box-shadow: none;
   border: solid 1px var(--desaturated-red);
   font-size: 0.875rem;
-  color: var(--desaturated-red);
+  color: var(--dark-red);
   padding: 0.75rem 2.5rem;
   z-index: 1;
+}
+
+.input-email::placeholder {
+  color: var(--desaturated-red);
+}
+
+.input-email:focus {
+  outline: solid 1px var(--soft-red);
 }
 
 .input-submit {
@@ -206,6 +214,21 @@ main {
   width: 4rem;
   display: flex;
   justify-content: center;
+}
+
+.user-message {
+  color: var(--soft-red);
+  text-align: center;
+  font-size: 0.8125rem;
+  margin-top: 0.5rem;
+  margin-right: 3rem;
+}
+
+.warning {
+  display: none;
+  position: absolute;
+  right: 26%;
+  bottom: 23%;
 }
 
 /* ======= Footer ======= */
