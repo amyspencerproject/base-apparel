@@ -201,8 +201,11 @@ main {
   border: none;
   position: absolute;
   z-index: 2;
-  right: -10%;
+  top: 1%;
+  right: -1%;
   width: 4rem;
+  display: flex;
+  justify-content: center;
 }
 
 /* ======= Footer ======= */

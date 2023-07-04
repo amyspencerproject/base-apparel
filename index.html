@@ -22,6 +22,8 @@
     />
 
     <link rel="stylesheet" href="./styles.css" />
+
+    <script src="./script.js" defer></script>
   </head>
   <body>
     <header>
@@ -59,10 +61,10 @@
             id="email-address"
             name="email-address"
             type="email"
-            pattern=".+@globex\.com"
             placeholder="Email Address"
           />
           <img class="hide" src="./images/icon-error.svg" alt="" />
+          <p class="error-message"></p>
           <button class="input-submit" type="submit">
             <img src="./images/icon-arrow.svg" />
           </button>

@@ -47,7 +47,7 @@ Users should be able to:
 
 ### What I learned
 
-- I am opting to go with a grid layout for this challenge. I think that it will be easy to make a the transition from mobile view with the hero image below the log and above the header to the desktop view. In the desktop view the hero image takes up the entire right hand side of the design and while the vertical stack of all the other elements slide to the left hand side.
+- I am opting to go with a grid layout for this challenge. I think that it will be easy to make a the transition from mobile view with the hero image below the logo and above the header to the desktop view. In the desktop view the hero image takes up the entire right hand side of the design and while the vertical stack of all the other elements slide to the left hand side.
 - I did put a div with a class of grid-container around the elements just to keep things out to the main elements where styling should be minimal.
 - Used a simple linear gradient for the background. Applied this to the body so it covered everything.
 - To achive the line breaks in the header used a `<span>` with class of break, `.break { display: block; }`
@@ -61,7 +61,9 @@ Users should be able to:
 - Had the same issue where the hero image was making the 1st row super tall. Thought that using `grid-auto-rows: min-content;` would fixt this but no winner yet.
 - Just left grid-template-rows off altogether for the time being.
 - Also noted that the `<header>` says it is causing an overflow.
+
   ![](./Screenshot%20header%20overflow.png)
+
   This could be why the spacing for the rows is still large. Not understanding why the 1st row has so much vertical spacing.
 
 Input/Form
@@ -69,7 +71,7 @@ Input/Form
 - Used a simple `<input>` with the `type = "email"`, `pattern = ".+@globex\.com"`, and a `size = 31 ` to accomomate longer email addresses with more characters.
 - Understand that to be accessible a label must also accompany the input field. The design does not call for a visual label. Researched how to add a label that a screen reader will pick up but is visually hidden.
 
-**Reminder that if you just do a display: none or a visibilty: hidden the screen reader will also ignore that element.**
+**Reminder** that if you just do a display: none or a visibilty: hidden the screen reader will also ignore that element.
 
 Adding a class like this seems to be the way to go.
 
@@ -89,6 +91,11 @@ Adding a class like this seems to be the way to go.
 - When adding a linear gradient to a button you have to call it a `background-image` not a `background-color`.
 - Do not know how to center the arrow image in the button??
 
+JavaScript
+
+- Found the Regular Expression (Regex) for validating email addresses. You can have a lot of different charactors but must have the @ followed by a domain name
+- Removed the one I had in the HTML for the `<input />`, `pattern=".+@globex\.com"`
+
 ### Continued development
 
 ### Useful resources
@@ -100,6 +107,7 @@ Adding a class like this seems to be the way to go.
 - [Inputs and Labels](https://css-tricks.com/html-inputs-and-labels-a-love-story/)
 - [Input Name Attribute](https://www.w3schools.com/tags/att_input_name.asp)
 - [Buttons w/ Gradients] (https://html-online.com/articles/gradient-background-buttons-css-html/)
+- [Regex Email Validator](https://www.w3resource.com/javascript/form/email-validation.php)
 
 ## Author
 
