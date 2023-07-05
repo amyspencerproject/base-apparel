@@ -6,26 +6,7 @@ const warningIcon = document.querySelector(".warning");
 
 // event listerner for submit button
 
-submitEmailButton.addEventListener("click", function (e) {
-  const emailText = emailInputField.value;
-  console.log(emailText);
-  e.preventDefault();
-
-  //clear out the error message
-  userMessage.innerText = "";
-
-  // validate the email address
-  let validEmail = inputValidator(emailText);
-
-  //clear out input field if valid
-  if ((validEmail = true)) {
-    emailInputField.value = "";
-  }
-});
-
-// event listener for submit form
-
-// submitEmail.addEventListener("submit", function (e) {
+// submitEmailButton.addEventListener("click", function (e) {
 //   const emailText = emailInputField.value;
 //   console.log(emailText);
 //   e.preventDefault();
@@ -42,6 +23,24 @@ submitEmailButton.addEventListener("click", function (e) {
 //   }
 // });
 
+// event listener for submit form
+
+submitEmail.addEventListener("submit", function (e) {
+  const emailText = emailInputField.value;
+  e.preventDefault();
+
+  //clear out the error message
+  // userMessage.innerText = "";
+
+  // validate the email address
+  let validEmail = inputValidator(emailText);
+
+  //clear out input field if valid
+  if ((validEmail = true)) {
+    emailInputField.value = "";
+  }
+});
+
 const inputValidator = function (emailText) {
   const acceptedEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
@@ -50,6 +49,6 @@ const inputValidator = function (emailText) {
     userMessage.innerText = "Please provide a valid email";
     warningIcon.style.display = "block";
   } else {
-    userMessage.innerText = "Thank you for siging up!";
+    userMessage.innerText = "Thank you for signing up!";
   }
 };

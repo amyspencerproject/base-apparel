@@ -88,9 +88,6 @@ select {
 }
 
 /* ======= Base Styles ======= */
-/*  {
-  outline: solid 1px red;
-} */
 
 body {
   background: linear-gradient(
@@ -218,7 +215,6 @@ main {
 }
 
 .input-submit:hover {
-  /* background-color: var(--desaturated-red); */
   background-color: var(--pink-gradient-one);
   background-image: none;
 }
@@ -236,6 +232,7 @@ main {
   position: absolute;
   right: 26%;
   bottom: 23%;
+  margin-right: 0.5rem;
 }
 
 /* ======= Footer ======= */
@@ -267,12 +264,6 @@ footer a {
 @media screen and (min-width: 60rem) {
   body {
     grid-template-columns: 1fr 1fr;
-    /* grid-template-rows: 100px repeat(2, minmax(150px, 1fr)); */
-    /* grid-template-rows: auto-fill, minmax(75px, 1fr); */
-    /* grid-template-rows: 100px repeat(2, minmax(30px, auto)); */
-    /* grid-auto-rows: auto; */
-    /* grid-auto-rows: min-content; */
-    /* grid-template-rows: repeat(3, minmax(10px, min-content)); */
   }
 
   aside {
@@ -302,7 +293,6 @@ footer a {
   }
 
   .input-submit {
-    padding: 0.78rem;
     width: 5rem;
   }
 }

@@ -29,7 +29,9 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./Screenshot%20invalid%20email.png)![](./Screenshot%20thank%20you.png)
+
+![](./Screenshot%20mobile.png)
 
 ### Links
 
@@ -44,6 +46,7 @@ Users should be able to:
 - CSS Variables
 - CSS Grid
 - Mobile-first workflow
+- vanilla Javascript
 
 ### What I learned
 
@@ -59,12 +62,13 @@ Users should be able to:
 - Not sure what to do with the hero image yet. I could make it an `<aside>` or keep it in grid container. If in an `<aside>` then the screen reader will annouce to the user that this is a complementary image. Or I could chose to not let the screen reader users know about the image and not describe it but then I would leave in in `<main>`.
 - Made the body under the grid format and then positioned header, aside, main, and footer. In the mobile view this meant letting everything auto positon. For the desktop view the format is 2 columns and 4 rows.
 - Had the same issue where the hero image was making the 1st row super tall. Thought that using `grid-auto-rows: min-content;` would fixt this but no winner yet.
-- Just left grid-template-rows off altogether for the time being.
 - Also noted that the `<header>` says it is causing an overflow.
 
   ![](./Screenshot%20header%20overflow.png)
 
   This could be why the spacing for the rows is still large. Not understanding why the 1st row has so much vertical spacing.
+
+- Just left grid-template-rows off altogether and everything looks fine. Keep it simple when you can!
 
 Input/Form
 
@@ -99,11 +103,11 @@ JavaScript
 - Removed the one I had in the HTML for the `<input />`, `pattern=".+@globex\.com"`
 - Put `aria-live="polite"` and `role="alert"` on the user message element so that a screen reader would alert the user but not aggressively that the email address was invalid or that they were now signed up.
 - Tried to move the event listener from the button with "click" to the form with "submit". With the eventListener on the button both an enter and mouse click on the button work and give appropriate responses that I wrote into my script.js file. With the eventListener on the form submit none of the invalid email JSX shows up. Instead I get a default email invalid message.
+- Asked for help on FEM Discord. I needed to add a `nonvalidate` attribute to the form.
+
   ![](./Screenshot%20EventListener%20Submit.png)
 
 ### Continued development
-
-I would like to understand why I can't get the event listener on the form submit to work correctly. I might revisit this later.
 
 ### Useful resources
 
@@ -119,6 +123,7 @@ I would like to understand why I can't get the event listener on the form submit
 - [Outline](https://developer.mozilla.org/en-US/docs/Web/CSS/outline)
 - [input:focus](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus)
 - [Aria Live for JS](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
+- [Form Attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attributes) - Resource that lists the `nonvalidate` attribute that allowed my custom validating to happen.
 
 ## Author
 
