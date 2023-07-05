@@ -98,10 +98,12 @@ JavaScript
 - Found the Regular Expression (Regex) for validating email addresses. You can have a lot of different charactors but must have the @ followed by a domain name
 - Removed the one I had in the HTML for the `<input />`, `pattern=".+@globex\.com"`
 - Put `aria-live="polite"` and `role="alert"` on the user message element so that a screen reader would alert the user but not aggressively that the email address was invalid or that they were now signed up.
-- Tried to move the event listener from the button with "click" to the form with "submit". With the eventlistener on the button both an enter and mouse click on the button work and give appropriate repsonses. With the eventListener on the form submit none of the invalid email JSX shows up. Instead I get a default email invalid message.
+- Tried to move the event listener from the button with "click" to the form with "submit". With the eventListener on the button both an enter and mouse click on the button work and give appropriate responses that I wrote into my script.js file. With the eventListener on the form submit none of the invalid email JSX shows up. Instead I get a default email invalid message.
   ![](./Screenshot%20EventListener%20Submit.png)
 
 ### Continued development
+
+I would like to understand why I can't get the event listener on the form submit to work correctly. I might revisit this later.
 
 ### Useful resources
 
