@@ -1,11 +1,31 @@
-const submitEmail = document.querySelector(".input-submit");
+const submitEmailButton = document.querySelector(".input-submit");
+const submitEmail = document.querySelector(".email-submit");
 const emailInputField = document.querySelector("#email-address");
 const userMessage = document.querySelector(".user-message");
 const warningIcon = document.querySelector(".warning");
 
 // event listerner for submit button
 
-submitEmail.addEventListener("click", function (e) {
+// submitEmailButton.addEventListener("click", function (e) {
+//   const emailText = emailInputField.value;
+//   console.log(emailText);
+//   e.preventDefault();
+
+//   //clear out the error message
+//   userMessage.innerText = "";
+
+//   // validate the email address
+//   let validEmail = inputValidator(emailText);
+
+//   //clear out input field if valid
+//   if ((validEmail = true)) {
+//     emailInputField.value = "";
+//   }
+// });
+
+// event listener for submit form
+
+submitEmail.addEventListener("submit", function (e) {
   const emailText = emailInputField.value;
   console.log(emailText);
   e.preventDefault();

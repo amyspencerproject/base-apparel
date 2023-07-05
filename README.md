@@ -97,6 +97,9 @@ JavaScript
 
 - Found the Regular Expression (Regex) for validating email addresses. You can have a lot of different charactors but must have the @ followed by a domain name
 - Removed the one I had in the HTML for the `<input />`, `pattern=".+@globex\.com"`
+- Put `aria-live="polite"` and `role="alert"` on the user message element so that a screen reader would alert the user but not aggressively that the email address was invalid or that they were now signed up.
+- Tried to move the event listener from the button with "click" to the form with "submit". With the eventlistener on the button both an enter and mouse click on the button work and give appropriate repsonses. With the eventListener on the form submit none of the invalid email JSX shows up. Instead I get a default email invalid message.
+  ![](./Screenshot%20EventListener%20Submit.png)
 
 ### Continued development
 
@@ -108,11 +111,12 @@ JavaScript
 - [Hiding Labels](https://www.w3.org/WAI/tutorials/forms/labels/#hiding-the-label-element)
 - [Inputs and Labels](https://css-tricks.com/html-inputs-and-labels-a-love-story/)
 - [Input Name Attribute](https://www.w3schools.com/tags/att_input_name.asp)
-- [Buttons w/ Gradients] (https://html-online.com/articles/gradient-background-buttons-css-html/)
+- [Buttons w Gradients](https://html-online.com/articles/gradient-background-buttons-css-html/)
 - [Regex Email Validator](https://www.w3resource.com/javascript/form/email-validation.php)
 - [Placeholder Styling](https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder)
 - [Outline](https://developer.mozilla.org/en-US/docs/Web/CSS/outline)
 - [input:focus](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus)
+- [Aria Live for JS](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
 
 ## Author
 

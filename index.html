@@ -54,7 +54,7 @@
           Add your email below to stay up-to-date with announcements and our
           launch deals.
         </p>
-        <form action="" class="email-submit">
+        <form class="email-submit">
           <label class="visuallyhidden" for="email-address"></label>
           <input
             class="input-email"
@@ -65,11 +65,11 @@
           />
           <img class="warning" src="./images/icon-error.svg" alt="" />
 
-          <button class="input-submit" type="submit">
-            <img src="./images/icon-arrow.svg" />
+          <button class="input-submit" type="submit" aria-label="Submit">
+            <img src="./images/icon-arrow.svg" alt="" />
           </button>
         </form>
-        <p class="user-message"></p>
+        <p class="user-message" aria-live="polite" role="alert"></p>
       </div>
     </main>
 
